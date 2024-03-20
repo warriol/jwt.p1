@@ -27,7 +27,8 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 
     @Override
     public ResponseEntity<String> registrarUsuario(Map<String, String> requestMap) {
-        log.info("Registro de Usuario {}", requestMap);
+        System.out.println("Registro de Usuario");
+        log.info("Registro de Usuario");
         try {
             if (validarRegistroUsuario(requestMap)) {
                 Usuario usuario = usuarioRepository.findByEmail(requestMap.get("email"));

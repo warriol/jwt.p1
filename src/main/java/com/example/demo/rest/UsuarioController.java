@@ -19,6 +19,7 @@ public class UsuarioController {
 
     @PostMapping("/registrar")
     public ResponseEntity<String> registrarUsuario(@RequestBody(required = false) Map<String, String> requestMap) {
+        System.out.println("Registro de Usuario");
         return usuarioServicio.registrarUsuario(requestMap);
     }
 }
